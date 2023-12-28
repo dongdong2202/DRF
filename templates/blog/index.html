@@ -1,0 +1,22 @@
+{% extends "../base/base.html" %}
+
+{% block title  %}
+    HomePage
+{% endblock %}
+
+{% block template %}
+{% include "../base/navbar.html" %}
+{% include "./components/splash.html"  %}
+
+<div class="container">
+    <div class='row pt-5'>
+        <div class = 'col-12 col-lg-8'>
+
+            {% include "./components/post-list-elements.html" %}
+        </div>
+        <div class='d-d-none d-lg-block col-4'>b</div>
+    </div>
+</div>
+    
+{% endblock %}
+

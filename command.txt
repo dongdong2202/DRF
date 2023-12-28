@@ -1,0 +1,15 @@
+
+for test:
+    pip install coverage
+    coverage run --omit='*/venv/*' manage.py test
+
+pip install pytest-cov
+pytest --cov 哪些代码被测试过了
+pytest --cov-report html --cov=./ 把test报告生成，可以具体定位哪个函数没有被测试过
+
+pip install factory-boy 可以批量生成数据库虚假数据faker Faker
+pip install pytest-factoryboy
+可以在manage.py里面进行配置，根据debug选择不同的setting进行（开发，发布）
+ python3 manage.py shell 进入django的命令行
+
+ pip install django-htmx

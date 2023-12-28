@@ -1,0 +1,26 @@
+
+{% for post in posts  %}
+    <a href='' class='tesxt-text-decoration-none'> </a> 
+   {% if forloop.last %}
+   <div class='card border-0 pb-3 pb-sm-5' hx-trigger='revealed'
+    hx-get="{% url 'blog:homepage' %}" > 
+   {% else %}
+        <div class='card border-0 pb-3 pb-sm-5'>
+   {% endif %}
+        <div class='row'>
+            <div class='col-8'>
+                <div class='card-body p-0'>                          
+                    <div class='pd-2 text-body'> {{ post.author }} </div>
+                    <h1 class='mb-1 fs-4 fw-bold'> {{ post.title }}</h1>
+                    <h2 class='text-muted fs-6'> {{post.content|truncatechars:12}}</h2>
+                    <div class='text-muted'>{{post.published|date:"M d"}}</div>
+                </div>                     
+            </div>
+            <div class='col-4'>
+                <img src='https://picsum.photos/205/115'
+                 class='img-fluid float-end'>
+            </div>
+        </div>
+    </div>
+</a>                      
+{% endfor %}
