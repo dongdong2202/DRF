@@ -41,6 +41,8 @@ INSTALLED_APPS = [
     'blog_api',
     'rest_framework',
     'corsheaders',
+    'django_htmx',
+    'taggit',
 ]
 
 MIDDLEWARE = [
@@ -52,6 +54,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    # 'django.htmx.middleware.HtmxMiddleware',
+     "django_htmx.middleware.HtmxMiddleware",
+
 ]
 
 ROOT_URLCONF = 'core.urls'
@@ -68,6 +73,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
+        'builtins': ["blog.templatetags.tag_cloud"],
         },
     },
 ]

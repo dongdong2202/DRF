@@ -1,0 +1,16 @@
+<div class='mb-4'>
+    <div class="bottom-0">
+   
+        <div>
+   
+            {% for tag in tags  %}
+            <span class='border border-dark p-1 mb-2 px-3 me-1 rounded-pill'>
+                <a class='text-decoration-none text-dark fs-5'>
+                    {{ tag.name }}
+                </a>
+            </span>
+            {% endfor %}
+   
+        </div>
+    </div>
+</div>

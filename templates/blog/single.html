@@ -1,0 +1,17 @@
+{% extends "../base/3-col.html" %}
+
+{% block left %} aaa {% endblock  %}
+
+{% block mid %}
+<div>
+{{ post.author }} </div>
+<div>
+    {{ post.title }} </div>
+<div> {{ post.published|date:"M d"}}</div>
+
+<div>
+    {{ post.content|truncatechars:50 }} </div>
+
+    {% endblock  %}
+    {% block right %}bbbb{% endblock  %}
+
